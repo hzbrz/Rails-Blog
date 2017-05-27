@@ -1,25 +1,44 @@
-<h1>Listing articles</h1>
+<h1 align="center">Listing articles</h1>
 
-<p>
-  <%= link_to "Create a new article", new_article_path %>
-</p>
+<div class="container">
+  <p class="goto-home">
+    <!-- This is a inline way to use glyphicons with ruby -->
+    <%= link_to '<i class="glyphicon glyphicon-home"></i> Create an article'.html_safe,
+                                                                             root_path,
+                                                                             class: "btn btn-link" %>
+  </p>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>description</th>
-  </tr>
+<div class="container">
+  <p class="new-article">
+    <!-- This is a inline way to use glyphicons with ruby -->
+    <%= link_to '<i class="glyphicon glyphicon-plus"></i> Create an article'.html_safe,
+                                                                             new_article_path,
+                                                                             class: "btn btn-link" %>
+  </p>
+</div>
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td><%= link_to "Show", article_path(article) %></td>
-      <td><%= link_to "Edit", edit_article_path(article) %></td>
-      <%-# We specify its a delete by giving it a method called delete, which deletes the article_path(@article) %>
-      <td><%= link_to "Delete", article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></td>
-    </tr>
-  <% end %>
-</table>
-
-<p><%= link_to "Homepage", root_path %></p>
+<% @articles.each do |article| %>
+  <div class="row">
+    <div class="each-article col-xs-8 col-xs-offset-2">
+      <!-- <div class="well well-lg"> -->
+        <div class="center article-title">
+          <%-# This is a one-liner to automatically turn every first letter of an article title capitalized %>
+          <%= article.title[0].capitalize + article.title[1,article.title.length] %>
+        </div>
+        <div class="article-body">
+          <%= simple_format(article.description) %>
+        </div>
+        <div class="article-actions">
+          <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-link" %>
+          <%= link_to "Delete this article", article_path(article), method: :delete,
+                                             data: { confirm: "Are you sure you want to delete this article?" },
+                                             class: "btn btn-xs btn-link" %>
+        </div>
+        <div class="article-design">
+          <%= "=" * 93 %>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+<% end %>
