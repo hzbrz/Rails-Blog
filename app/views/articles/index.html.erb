@@ -1,8 +1,8 @@
 <h1 align="center">Listing articles</h1>
 
-<div class="container">
+<!-- <div class="container">
   <p class="goto-home">
-    <!-- This is a inline way to use glyphicons with ruby -->
+    <%-# This is a inline way to use glyphicons with ruby %>
     <%= link_to '<i class="glyphicon glyphicon-home"></i> Create an article'.html_safe,
                                                                              root_path,
                                                                              class: "btn btn-link" %>
@@ -11,12 +11,12 @@
 
 <div class="container">
   <p class="new-article">
-    <!-- This is a inline way to use glyphicons with ruby -->
+    <%-# This is a inline way to use glyphicons with ruby %>
     <%= link_to '<i class="glyphicon glyphicon-plus"></i> Create an article'.html_safe,
                                                                              new_article_path,
                                                                              class: "btn btn-link" %>
   </p>
-</div>
+</div> -->
 
 <% @articles.each do |article| %>
   <div class="row">
@@ -36,7 +36,7 @@
                                              class: "btn btn-xs btn-link" %>
         </div>
         <div class="article-design">
-          <%= "=" * 93 %>
+          <p></p>
         </div>
       <!-- </div> -->
     </div>
