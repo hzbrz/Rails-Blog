@@ -28,6 +28,16 @@
         </div>
         <div class="article-body">
           <%= simple_format(article.description) %>
+          <div class="article-meta-details">
+            <small>
+            <!-- This is a temporary fix:
+            (if article.user) is added because this will make sure that it will display the articles even if a
+            user is not associated and the username will be displayed only if the user is associated with an article. -->
+              Created by: <%= article.user.username if article.user %>,
+              <%= time_ago_in_words(article.created_at) %> ago,
+              last updated: <%= time_ago_in_words(article.updated_at) %> ago
+            </small>
+          </div>
         </div>
         <div class="article-actions">
           <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-link" %>

@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'welcome/about', to: 'welcome#about'
 
-  # Creates an articles table 
+  # Creates an articles table
   resources :articles
+
+  get 'signup', to: 'users#new'
+
+  resources :users, except: [:new]
 end

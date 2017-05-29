@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false },
             length: { maximum: 105 },
             format: { with: VALID_EMAIL_REGEX }
-  has_secure_password
+
   # Then create another feature branch when adding the foreign key associations call that - userarticle-associations
+  has_secure_password
+  # added user: Hasan Z pass: password123
 end
