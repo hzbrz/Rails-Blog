@@ -18,12 +18,14 @@
           </small>
         </div>
       </div>
-      <div class="article-actions">
-        <%= link_to "Edit this article", edit_article_path(object), class: "btn btn-xs btn-link" %>
-        <%= link_to "Delete this article", article_path(object), method: :delete,
-                                           data: { confirm: "Are you sure you want to delete this article?" },
-                                           class: "btn btn-xs btn-link" %>
-      </div>
+      <% if logged_in? && current_user == object.user %>
+        <div class="article-actions">
+          <%= link_to "Edit this article", edit_article_path(object), class: "btn btn-xs btn-link" %>
+          <%= link_to "Delete this article", article_path(object), method: :delete,
+                                             data: { confirm: "Are you sure you want to delete this article?" },
+                                             class: "btn btn-xs btn-link" %>
+        </div>
+      <% end %>
       <div class="article-design">
         <p></p>
       </div>
