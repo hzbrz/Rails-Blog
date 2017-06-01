@@ -34,6 +34,11 @@ body {
   color: white;
 }
 
+.header-article {
+    color: white;
+    padding-bottom: 20px;
+}
+
 #header-font-color {
   color: white;
 }
@@ -60,7 +65,8 @@ body {
 h1.jumbo-header{
   float: left;
   color: white;
-  margin-left: -40px;
+  margin-left: -15px;
+  padding-top: 10px;
 }
 
 .btn-xlarge {
@@ -89,7 +95,7 @@ h1.jumbo-header{
 }
 
 .article-actions {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px dashed #eaeaea;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -104,15 +110,23 @@ h1.jumbo-header{
   margin-top: -8px;
 }
 
+.article-view {
+  padding-top: 5px;
+}
+
 .pagination {
   position: relative;
   z-index: 0;
 }
 
+.listing-articles {
+  padding-bottom: 20px;
+}
+
 .article-title {
   font-weight: bold;
   font-size: 1.4em;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 15px;
 }
 
