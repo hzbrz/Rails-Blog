@@ -44,7 +44,8 @@
         <li><%= link_to "Log out", logout_path, method: :delete, id: "first-links" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" id="first-links" data-toggle="dropdown" role="button"
-          aria-haspopup="true" aria-expanded="false">Your Profile<span class="caret"></span></a>
+          aria-haspopup="true" aria-expanded="false">Your Profile <%= "Admin" if current_user.admin? %>
+          <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Edit account", edit_user_path(current_user) %></li>
             <li><%= link_to "View account", user_path(current_user) %></li>

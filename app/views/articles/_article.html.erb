@@ -18,7 +18,7 @@
           </small>
         </div>
       </div>
-      <% if logged_in? && current_user == object.user %>
+      <% if logged_in? && (current_user == object.user || current_user.admin?) %>
         <div class="article-actions">
           <%= link_to "Edit this article", edit_article_path(object), class: "btn btn-xs btn-link" %>
           <%= link_to "Delete this article", article_path(object), method: :delete,

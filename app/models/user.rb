@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :articles
+  has_many :articles, dependent: :destroy
   # Create a new feature branch called user-validations and do the validations there
 
   before_save { self.email = email.downcase }
