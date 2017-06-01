@@ -1,7 +1,11 @@
-$navbar-default-bg: #2D2D2D;
+$navbar-default-bg: rgba(#412c04, 0.95);
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: rgb(17, 34, 47);
+}
 
 #logo {
   float: left;
@@ -17,7 +21,29 @@ $navbar-default-bg: #2D2D2D;
   text-decoration: none;
 }
 
+#first-links {
+  color: rgba(#808e90, 0.86);
+}
+
 #first-links:hover {
+  color: white;
+}
+
+.user-new-h1 {
+  padding-bottom: 25px;
+  color: white;
+}
+
+#header-font-color {
+  color: white;
+}
+
+#spacing-under-first-pagination {
+  margin-bottom: -35px;
+}
+
+.session-new-h1 {
+  padding-bottom: 25px;
   color: white;
 }
 
@@ -69,8 +95,9 @@ h1.jumbo-header{
 }
 
 .article-design {
-  border-top: 2px dashed rgba(#333a44, 0.84);
-  border-bottom: 2px dashed rgba(#333a44, 0.84);
+  border-top: 2px dashed;
+  border-bottom: 2px dashed;
+  color: #999b9e;
 }
 
 .article-design p {
@@ -80,7 +107,12 @@ h1.jumbo-header{
 .article-title {
   font-weight: bold;
   font-size: 1.4em;
-  padding-bottom: 4px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+#design-spacing {
+  margin: -5px 0 -5px 0;
 }
 
 .article-body {
@@ -90,11 +122,17 @@ h1.jumbo-header{
 
 .each-article {
   padding-top: 20px;
+  color: white;
+}
+
+#cancel-request-link {
+  padding-left: 45px;
 }
 
 .listing {
   list-style: none;
   padding-top: 0;
+  padding-right: 40px;
 }
 
 .footer {
@@ -121,3 +159,80 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+#footer-links:hover {
+  color: white;
+}
+
+// SECTION FOR SIDE NAV-BAR CSS CODE
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.1s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 0 8px 0;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav li {
+  list-style: none;
+  padding: 8px 0 8px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav ul li {
+  padding: 8px 0 8px 0;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav
+(less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.sidenav-span {
+  color:white;
+  font-size: 20px;
+}
+// END OF SIDE NAV-BAR CSS

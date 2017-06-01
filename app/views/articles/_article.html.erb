@@ -3,7 +3,9 @@
     <div class="each-article col-xs-8 col-xs-offset-2">
       <div class="center article-title">
         <%-# This is a one-liner to automatically turn every first letter of an article title capitalized %>
-        <%= object.title[0].capitalize + object.title[1,object.title.length] %>
+        <%= "-" * (object.title[0,object.title.length]).length %>
+        <p id="design-spacing"><%= object.title[0].capitalize + object.title[1,object.title.length] %></p>
+        <%= "-" * (object.title[0,object.title.length]).length %>
       </div>
       <div class="article-body">
         <%= simple_format(object.description) %>

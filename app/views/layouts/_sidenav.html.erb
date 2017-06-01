@@ -1,0 +1,16 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li>Articles</li>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title[0].capitalize + article.title[1, article.title.length], article_path(article) %>
+      </li>
+    <% end %>
+  </ul>  
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span class="glyphicon glyphicon-list sidenav-span" onclick="openNav()" class="side-nav-bar" style="">
+Articles
+</span>

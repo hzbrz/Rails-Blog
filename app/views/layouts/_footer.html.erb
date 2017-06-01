@@ -1,12 +1,12 @@
 <div class="container">
   <footer class="footer">
     <small>
-      Copyright &copy; <a href="https://www.youtube.com/watch?v=ipQKBwQxoeQ">Peep n Creep</a>
-      by <a href="https://alpha-blog-hasan.herokuapp.com">Hasan Zahid</a>
+      Copyright &copy; <a href="https://www.youtube.com/watch?v=ipQKBwQxoeQ" id="footer-links">Peep n Creep</a>
+      by <a href="https://alpha-blog-hasan.herokuapp.com" id="footer-links">Hasan Zahid</a>
     </small>
     <nav>
-      <ul>
-        <li><%= link_to "About", welcome_about_path %></li>
+      <ul class="footer-lisitng">
+        <li><%= link_to "About", welcome_about_path, id: "footer-links" %></li>
       </ul>
     </nav>
   </footer>

@@ -1,24 +1,7 @@
-<h1 align="center">Listing articles</h1>
+<%= render 'layouts/sidenav' %>
+<h1 align="center" id = "header-font-color">Listing articles</h1>
 
-<!-- <div class="container">
-  <p class="goto-home">
-    <%-# This is a inline way to use glyphicons with ruby %>
-    <%= link_to '<i class="glyphicon glyphicon-home"></i> Create an article'.html_safe,
-                                                                             root_path,
-                                                                             class: "btn btn-link" %>
-  </p>
-</div>
-
-<div class="container">
-  <p class="new-article">
-    <%-# This is a inline way to use glyphicons with ruby %>
-    <%= link_to '<i class="glyphicon glyphicon-plus"></i> Create an article'.html_safe,
-                                                                             new_article_path,
-                                                                             class: "btn btn-link" %>
-  </p>
-</div> -->
-
-<div align="center">
+<div align="center" id="spacing-under-first-pagination">
   <%= will_paginate %>
 </div>
 <%= render 'article', obj: @articles %>
